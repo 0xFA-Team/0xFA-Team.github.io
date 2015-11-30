@@ -8,7 +8,7 @@ vBulletin 的一枚 RCE 利用和简要的分析被曝光，产生漏洞的原�
 
 使用 [原文](http://pastie.org/pastes/10527766/text?key=wq1hgkcj4afb9ipqzllsq) 提供的 Payload 可以直接在受影响的站点上执行 `phpinfo(1)`：
 
-![]({{ site.url }}/public/img/article/2015-11-06-unserialize-attack-with-vbulletin-5-x-x-rce/1.png)
+![](http://rickgray.me/public/img/article/2015-11-06-unserialize-attack-with-vbulletin-5-x-x-rce/1.png)
 
 具体 Payload 的构造过程也文中有所提及，但是笔者在对 vBulletin 5.1.x 版本进行测试的时候，发现原本的 Payload 并不能成功，甚是疑惑。然而在深入分析后，发现在具体利用的时候还需要结合 vBulletin 程序本身的一些代码结构才能得到一个较为通用的 Payload，通过下面的分析后就能够明白。
 
