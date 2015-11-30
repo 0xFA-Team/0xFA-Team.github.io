@@ -3,7 +3,11 @@
 # # # # # # # #
 
 # Basic
-name:               "0xFA-Club"
+name:               "0xFA-Team"
+
+# paper
+max_paper:   20
+
 
 # URL
 baseurl:            ""
@@ -19,6 +23,7 @@ nav:
     href:           "//kiko.gfjaru.com/about"
   - name:           "Download"
     href:           "//github.com/gfjaru/Kiko/releases"
+
 
 # Sass
 sass:

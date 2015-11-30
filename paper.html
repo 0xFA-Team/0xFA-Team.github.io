@@ -1,25 +1,37 @@
 ---
 layout: default
+title:  0xFA-Team's Paper
 ---
-<header class="masthead">
-  <h1 class="masthead-title">
-    <a href="{{ site.baseurl }}/">{{ site.name }}<span>&#39;s blog</span></a>
-  </h1>
-</header>
+
+  <div style="width:200px; height:100px; background:url(https://avatars0.githubusercontent.com/u/13430790?v=3&s=200) no-repeat  left;" >
+  	<div style="padding-left:130px; padding-top:50px">
+  		<h1>
+  	  		<a   href="{{ site.baseurl}}">{{ site.name }}</a> 
+  		</h1>
+  	</div>  
+  </div>
+
 
 <div style="margin-top:50px" class="content list">
 {% if site.posts.size == 0 %}
-  <h2>No post found</h2>
+  <h3>No post found</h3>
 {% else %}
 {% for post in site.posts %}
-  <div style="margin-top:50px" class="list-item">
-    <h2 class="list-post-title">
+
+  <div style="margin-top:20px" class="list-item">
+    <h4>
       <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
-    </h2>
+    </h4>
     <div class="list-post-date">
-      <time>{{ post.date | date_to_string }}</time>
+      <time>{{ post.date | date_to_string }}  {{post.author}}@0xFA.club</time>
     </div>
   </div>
 {% endfor %}
 {% endif %}
 </div>
+
+        <div style="background-color: #FCFBF6;margin-left: auto;margin-right: auto;text-align: center;margin-top:40px;">
+            Powered by <a herf="{{ site.baseurl}}"> 0xFA-Team</a>
+            <br>
+            ©Copyright 2014-2500 <a herf="{{ site.baseurl}}"> 0xFA-Team</a>
+        </div>{{ site.baseurl}}

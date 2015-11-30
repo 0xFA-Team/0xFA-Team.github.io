@@ -9,6 +9,7 @@ tags: [Hacking]
 imagefeature: 
 mathjax: 
 chart: 
+author: Cupport
 comments: true
 featured: true
 ---

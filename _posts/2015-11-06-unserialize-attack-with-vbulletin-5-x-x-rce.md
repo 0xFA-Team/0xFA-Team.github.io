@@ -2,6 +2,7 @@
 layout: post
 title: "unserialize() 实战之 vBulletin 5.x.x 远程代码执行"
 tags: [web, php, security]
+author: RickGray
 ---
 
 vBulletin 的一枚 RCE 利用和简要的分析被曝光，产生漏洞的原因源于 vBulletin 程序在处理 Ajax API 调用的时候，使用 `unserialize()` 对传递的参数值进行了反序列化操作，导致攻击者使用精心构造出的 Payload 直接导致代码执行。关于 PHP 中反序列化漏洞的问题可以参考 OWASP 的[《PHP Object Injection》](https://www.owasp.org/index.php/PHP_Object_Injection)。

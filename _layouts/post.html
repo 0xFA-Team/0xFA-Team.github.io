@@ -1,15 +1,31 @@
 ---
 layout: default
 ---
-<header class="masthead">
+<!--<header class="masthead">
   <h1 class="masthead-title--small">
     <a href="{{ site.baseurl }}/">{{ site.name }}</a>
   </h1>
-</header>      
+</header>      -->
 <div class="content post">
-  <h1 class="post-title">{{ page.title }}</h1>
+  <h2 class="post-title">{{ page.title }}</h2>
   <div class="post-date">
-    <time>{{ page.date | date_to_string }}</time>
+   <time>{{ page.date | date_to_string }}</time>
+   <br> Tags:
+   {% if page.tags.size == 0%}
+   {% else %}
+   	{% for data in page.tags %}
+    	{{data}}
+    	{% endfor %}
+    {% endif %}
   </div>
+  Author: {{ page.author }}@0xFA.club
+  <br>
+<br>
   {{ content }}
 </div>
+
+        <div style="background-color: #FCFBF6;margin-left: auto;margin-right: auto;text-align: center;margin-top:40px;">
+            Powered by <a herf="{{ site.baseurl}}"> 0xFA-Team</a>
+            <br>
+            ©Copyright 2014-2500 <a herf="{{ site.baseurl}}"> 0xFA-Team</a>
+        </div>{{ site.baseurl}}
