@@ -69,7 +69,7 @@ featured: true
 
     但是我机智的用 nmap 扫了下端口，发现 FTP 是 vsftpd。vsftpd 这么 6666，没做 chroot 的情况下可以各种看目录，而且用系统帐号就能登陆上。虽然是 `/sbin/nologin/`，但是 vsftp 还是能用的。上去之后翻了下目录，找到了加密后的密码还有加密密码的密钥。
 
-    ![](http://7d9lm5.com1.z0.glb.clouddn.com/from-arbitrarily-file-download-to-root/4.PNG) 
+![](http://7d9lm5.com1.z0.glb.clouddn.com/from-arbitrarily-file-download-to-root/4.PNG) 
 
     ## 0x02
 
