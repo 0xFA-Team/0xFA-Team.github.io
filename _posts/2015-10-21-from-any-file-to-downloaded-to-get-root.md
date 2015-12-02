@@ -1,4 +1,4 @@
- ---
+---
 layout: post
 title: "从任意文件下载到系统 root 权限"
 description: "Hacking"
@@ -14,12 +14,9 @@ comments: true
 featured: true
 ---
 
+
 # [从任意文件下载到系统 root 权限]()
 
-        
-            Posted at 2015-10-21
-        
-        
 
 其实蛮没有技术含量。我在两年前遇到这个任意文件下载，却不知道该怎么做，到现在渗透经验足了，拿下了，然后记录一下这一个过程，就这样qwq。
 
