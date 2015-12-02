@@ -55,7 +55,7 @@ featured: true
 
     这个站其实是 weblogic 搭建的，比较蛋碎的是，我又不知道 weblogic 的密码，也不知道存放密码的路径。 
 
-  #### 题外话
+#### 题外话
 
     其实如果经验足够的话，应该可以知道密钥和密码文件存放的路径。
 
@@ -65,13 +65,13 @@ featured: true
 
     其中大部分信息都在 .bash_history 得到了，不过我还是不知道在哪，真是残念。
 
-  #### 题外话结束
+#### 题外话结束
 
     但是我机智的用 nmap 扫了下端口，发现 FTP 是 vsftpd。vsftpd 这么 6666，没做 chroot 的情况下可以各种看目录，而且用系统帐号就能登陆上。虽然是 `/sbin/nologin/`，但是 vsftp 还是能用的。上去之后翻了下目录，找到了加密后的密码还有加密密码的密钥。
 
   ![](http://7d9lm5.com1.z0.glb.clouddn.com/from-arbitrarily-file-download-to-root/4.PNG) 
 
-  ## 0x02
+## 0x02
 
 根据[http://drops.wooyun.org/tips/349](http://drops.wooyun.org/tips/349)，可以造怎么去破解密码。里面给出的密码破解的 java 脚本依赖 weblogic 的包，我并不想在本地安装 weblogic，于是去万能的 Github 找了下，找到这个程序：[https://github.com/NetSPI/WebLogicPasswordDecryptor](https://github.com/NetSPI/WebLogicPasswordDecryptor)
 
@@ -108,7 +108,7 @@ featured: true
 
    ![](http://7d9lm5.com1.z0.glb.clouddn.com/from-arbitrarily-file-download-to-root/1.PNG)
 
-  ## 0x03
+## 0x03
 
     拿到之后，并不知道密码，心里很纠结。
 
