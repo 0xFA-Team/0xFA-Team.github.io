@@ -17,7 +17,7 @@ featured: true
 * 目录
 {:toc}
 
-# [从任意文件下载到系统 root 权限]()
+# 从任意文件下载到系统 root 权限
 
 
 其实蛮没有技术含量。我在两年前遇到这个任意文件下载，却不知道该怎么做，到现在渗透经验足了，拿下了，然后记录一下这一个过程，就这样qwq。
@@ -69,11 +69,11 @@ featured: true
 
     但是我机智的用 nmap 扫了下端口，发现 FTP 是 vsftpd。vsftpd 这么 6666，没做 chroot 的情况下可以各种看目录，而且用系统帐号就能登陆上。虽然是 `/sbin/nologin/`，但是 vsftp 还是能用的。上去之后翻了下目录，找到了加密后的密码还有加密密码的密钥。
 
-![](http://7d9lm5.com1.z0.glb.clouddn.com/from-arbitrarily-file-download-to-root/4.PNG) 
+  ![](http://7d9lm5.com1.z0.glb.clouddn.com/from-arbitrarily-file-download-to-root/4.PNG) 
 
     ## 0x02
 
-    根据 [http://drops.wooyun.org/tips/349](http://drops.wooyun.org/tips/349)，可以造怎么去破解密码。里面给出的密码破解的 java 脚本依赖 weblogic 的包，我并不想在本地安装 weblogic，于是去万能的 Github 找了下，找到这个程序：[https://github.com/NetSPI/WebLogicPasswordDecryptor](https://github.com/NetSPI/WebLogicPasswordDecryptor)
+根据[http://drops.wooyun.org/tips/349](http://drops.wooyun.org/tips/349)，可以造怎么去破解密码。里面给出的密码破解的 java 脚本依赖 weblogic 的包，我并不想在本地安装 weblogic，于是去万能的 Github 找了下，找到这个程序：[https://github.com/NetSPI/WebLogicPasswordDecryptor](https://github.com/NetSPI/WebLogicPasswordDecryptor)
 
     用法如下： 
 
@@ -104,9 +104,9 @@ featured: true
 
     既然密码破解出来了，那就去 getshell 吧。
 
-    ![](http://7d9lm5.com1.z0.glb.clouddn.com/from-arbitrarily-file-download-to-root/2.PNG)
+   ![](http://7d9lm5.com1.z0.glb.clouddn.com/from-arbitrarily-file-download-to-root/2.PNG)
 
-    ![](http://7d9lm5.com1.z0.glb.clouddn.com/from-arbitrarily-file-download-to-root/1.PNG)
+   ![](http://7d9lm5.com1.z0.glb.clouddn.com/from-arbitrarily-file-download-to-root/1.PNG)
 
     ## 0x03
 
@@ -114,7 +114,7 @@ featured: true
 
     因为这里的 cisco 账号也在某 mail.cqupt.edu.cn 中出现了，所以，我感觉还是要上一个比较牛逼的 backdoor。 
 
-    问了我猫总之后，猫总推荐了我一个 openssh 的 backdoor。地址在这：[http://core.ipsecs.com/rootkit/patch-to-hack/0x06-openssh-5.9p1.patch.tar.gz](http://core.ipsecs.com/rootkit/patch-to-hack/0x06-openssh-5.9p1.patch.tar.gz) 
+   问了我猫总之后，猫总推荐了我一个 openssh 的 backdoor。地址在这：[http://core.ipsecs.com/rootkit/patch-to-hack/0x06-openssh-5.9p1.patch.tar.gz](http://core.ipsecs.com/rootkit/patch-to-hack/0x06-openssh-5.9p1.patch.tar.gz) 
 
     首先 wget 下来，然后看一下 README 和 INSTALL。
 
@@ -156,7 +156,7 @@ featured: true
 
     接着下载 openssh-5.9p1 的源代码，patch 掉，然后修改 `includes.h`，在 `includes.h` 的最下面。
 
-    ![](http://7d9lm5.com1.z0.glb.clouddn.com/from-arbitrarily-file-download-to-root/3.PNG) 
+   ![](http://7d9lm5.com1.z0.glb.clouddn.com/from-arbitrarily-file-download-to-root/3.PNG) 
 
     接着 `./configure --prefix=/usr --sysconfdir=/etc/ssh --with-pam --with-kerberos5`，然后 `make &amp;&amp; make install`。 
 
@@ -171,12 +171,3 @@ featured: true
     [root@xxx tmp]#
 
 接下来就是慢慢的等待了。
-
-        
-        
-
-        
-        
-            
-        
-    
