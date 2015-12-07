@@ -1,9 +1,13 @@
-#HCTF-WriteUp  
-**Author:0xFA-Team**
-**Contact: admin@0xfa.club**
+---
+layout: post
+title: "2015 HCTF Writeup"
+tags: [ctf]
+author: 0xFA Team
+---
+* 目录
+{:toc}
 
-[toc]
-
+#HCTF Writeup
 ###Server is done
 
 　　发现，返回的Message和注释掉的加密过的flag，每次都会变化。再然后发现Message长度和我们post过去的arg参数一样长。猜是流密码，然后post一个老长的arg，用返回的Message与arg异或得到本次加密的密码。再用这个密码异或后面的flag就好了。  
