@@ -1,15 +1,15 @@
 ---
 layout: post
-title: "Linux Penetration"
+title: "Bit flipping Attack 笔记"
 description: "Hacking"
 headline: 
-modified: 2015-11-20
+modified: 2015-03-16
 category: Hacking
 tags: [Hacking]
 imagefeature: 
 mathjax: 
 chart: 
-author: Cupport
+author: Ricter
 comments: true
 featured: true
 ---
