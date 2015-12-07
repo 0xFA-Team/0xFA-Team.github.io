@@ -162,7 +162,7 @@ print "flag is: HCTF{" + "".join(flag) + "}"
       GetDlgItemTextA(hWnd, 1001, &String, 41);
       if ( sub_401190(&String) )
       {
-        wsprintfA(&Text, "hctf{%s}", &String);
+        wsprintfA(&Text, "hctf{\%s}", &String);
         MessageBoxA(hWnd, &Text, "Right", 0);
       }
 ```
