@@ -17,9 +17,8 @@ featured: true
 * 目录
 {:toc}
 
-Bit-flipping Attack 笔记](/posts/Bit-flipping%20Attack%20%E7%AC%94%E8%AE%B0)
 
-Bit-flippting attack 是针对于 CBC 加密模式的一类攻击。攻击的意图也很直接：修改某一组密文的某个字节，导致另外一组解密出来的明文发生变化。
+##Bit-flippting attack 是针对于 CBC 加密模式的一类攻击。攻击的意图也很直接：修改某一组密文的某个字节，导致另外一组解密出来的明文发生变化。
 
 ### Introduction
 
