@@ -60,8 +60,8 @@ HCTF的一道PPC，计算的规则很好懂。
 		int n;char ch;
 		A[0] = 1;
 		for(int i=1; i<=maxn-10; i++)
-			    A[i] = (A[i-1] * i)%MOD;
-		//A内存放阶乘地址
+			A[i] = (A[i-1] * i)%MOD;
+			//A内存放阶乘地址
 		C[0][0] = 1;//规定排列组合C00=1
 		for(int i=1; i<=maxn-10; i++)
 		{
@@ -88,12 +88,15 @@ HCTF的一道PPC，计算的规则很好懂。
 					for(int k=i; k<j; k++)
 					{
 						LL t;
-						if(op[k] == '*')
-							t = (dp[i][k] * dp[k+1][j])%MOD;
-						if(op[k] == '+')
-							t = (dp[i][k]*A[j-k-1]+dp[k+1][j]*A[k-i])%MOD;
-						if(op[k] == '-')
-							t = (dp[i][k]*A[j-k-1] - dp[k+1][j]*A[k-i])%MOD;
+						if(op[k] == '*'){
+						t = (dp[i][k] * dp[k+1][j])%MOD;
+						}
+						if(op[k] == '+'){
+						t = (dp[i][k]*A[j-k-1]+dp[k+1][j]*A[k-i])%MOD;
+						}
+						if(op[k] == '-'){
+						t = (dp[i][k]*A[j-k-1] - dp[k+1][j]*A[k-i])%MOD;
+						}
 						dp[i][j] = (dp[i][j] + t * C[j-i-1][k-i])%MOD;
 					}
 				}
