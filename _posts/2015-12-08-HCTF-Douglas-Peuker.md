@@ -89,15 +89,15 @@ HCTF的一道PPC，计算的规则很好懂。
 					{
 						LL t;
 						if(op[k] == '*'){
-						t = (dp[i][k] * dp[k+1][j])%MOD;
+						t = (dp[i][k]*dp[k+1][j])%MOD;
 						}
 						if(op[k] == '+'){
 						t = (dp[i][k]*A[j-k-1]+dp[k+1][j]*A[k-i])%MOD;
 						}
 						if(op[k] == '-'){
-						t = (dp[i][k]*A[j-k-1] - dp[k+1][j]*A[k-i])%MOD;
+						t = (dp[i][k]*A[j-k-1]-dp[k+1][j]*A[k-i])%MOD;
 						}
-						dp[i][j] = (dp[i][j] + t * C[j-i-1][k-i])%MOD;
+						dp[i][j] = (dp[i][j]+t*C[j-i-1][k-i])%MOD;
 					}
 				}
 			}
