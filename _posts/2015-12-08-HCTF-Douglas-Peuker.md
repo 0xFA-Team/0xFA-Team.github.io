@@ -148,11 +148,10 @@ HCTF的一道PPC，计算的规则很好懂。
 	sum = a1+a2+a3+a4+a5+a6+b1+b2+b3+b4+b5+b6
 
 从这个式子不难看出
+![](http://z-onion.cc/2.png)
 
 	sum = a*A[3](+-)(A+B+C+D+E+F)+b*A[3](+-)(A+B+C+D+E+F)    
 
-
-![](http://z-onion.cc/2.png)
 
 这也就意味着，k的左边也就是n这一边最后处理的数据为:
 
