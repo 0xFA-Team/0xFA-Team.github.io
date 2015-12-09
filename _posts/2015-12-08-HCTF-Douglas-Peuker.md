@@ -16,7 +16,7 @@ featured: true
 
 HCTF的一道PPC，计算的规则很好懂。
 
-![][http://z-onion.cc/1.png]
+![](http://z-onion.cc/1.png)
 
 把每个运算符都考虑成单独的，分别做先后运算，如下：
 
