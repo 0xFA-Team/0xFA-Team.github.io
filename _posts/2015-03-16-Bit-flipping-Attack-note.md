@@ -137,16 +137,3 @@ CBC 模式加密的一个主要特点是完全依靠前面的密码文段来译�
 1.  [http://resources.infosecinstitute.com/cbc-byte-flipping-attack-101-approach/](http://resources.infosecinstitute.com/cbc-byte-flipping-attack-101-approach/)
 
 2.  [http://www.cnblogs.com/happyhippy/archive/2006/12/23/601353.html](http://www.cnblogs.com/happyhippy/archive/2006/12/23/601353.html)
-        
-        
-
-                _Tagged in:
-
-                    [密码学](/tags/密码学)
-
-                _
-
-        
-        
-            
-        
