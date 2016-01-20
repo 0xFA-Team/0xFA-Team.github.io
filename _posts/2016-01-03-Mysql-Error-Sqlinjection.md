@@ -2,7 +2,7 @@
 layout: post
 title: "Mysql 报错注入"
 description: "Hacking"
-author: Caijiji@0xfa.club
+author: Caijiji
 category: Hacking
 tags: [Hacking]
 ---
