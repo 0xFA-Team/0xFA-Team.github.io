@@ -126,6 +126,7 @@ author: 0xFA Team
 
 　　就是，用`0x02`去异或程序中写死的一段数据`Ea57`，所以，结合起来的解密脚本是：
 
+```
     #!/usr/bin/env python
     # -*- coding: utf-8 -*-
     __Url__ = 'Http://www.purpleroc.com'
@@ -153,6 +154,7 @@ author: 0xFA Team
         flag.append(chr(ord(i) ^ 0x02))
                                                     
     print "flag is: HCTF{" + "".join(flag) + "}"
+```
 
 `flag is: HCTF{UareS0cLeVerGc75}`
 
