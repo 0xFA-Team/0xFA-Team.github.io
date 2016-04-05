@@ -129,8 +129,6 @@ author: 0xFA Team
 ```
     #!/usr/bin/env python
     # -*- coding: utf-8 -*-
-    __Url__ = 'Http://www.purpleroc.com'
-    __author__ = 'Tracy_梓朋'
                                                                 
     cipher = [0x66, 0x64, 0x0C8, 0x68, 0x75, 0x75, 0x14, 0x0B, 0x68, 0x15, 0x68, 0x12]
     data = 'Ea57'
@@ -351,8 +349,6 @@ author: 0xFA Team
 
     #!/usr/bin/env python
     # -*- coding: utf-8 -*-
-    __Url__ = 'Http://www.purpleroc.com'
-    __author__ = 'Tracy_梓朋'
                
     from pwn import *
     import pwnlib 
