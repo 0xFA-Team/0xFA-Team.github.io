@@ -127,31 +127,31 @@ author: 0xFA Team
 　　就是，用`0x02`去异或程序中写死的一段数据`Ea57`，所以，结合起来的解密脚本是：
 
 ```
-    #!/usr/bin/env python
-    # -*- coding: utf-8 -*-
-    
-    cipher = [0x66, 0x64, 0x0C8, 0x68, 0x75, 0x75, 0x14, 0x0B, 0x68, 0x15, 0x68, 0x12]
-    data = 'Ea57'
-    dic = {}
-    for i in range(26):#A-Z
-        dic[i] = chr(i+0x41)
-    for i in range(26):#a-z
-        dic[i+0x64] = chr(i+0x61)
-    for i in range(10):#0-9
-        dic[i+0xC8] = chr(i+0x30)
-     
-    cipher[0],cipher[6] = cipher[6],cipher[0]
-    cipher[3],cipher[8] = cipher[8],cipher[3]
-    cipher[5],cipher[2] = cipher[2],cipher[5]
-    cipher[11],cipher[4] = cipher[4],cipher[11]
-                                                      
-    flag = []
-    for i in cipher:
-        flag.append(dic[i])
-    for i in data:
-        flag.append(chr(ord(i) ^ 0x02))
-                                                    
-    print "flag is: HCTF{" + "".join(flag) + "}"
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+cipher = [0x66, 0x64, 0x0C8, 0x68, 0x75, 0x75, 0x14, 0x0B, 0x68, 0x15, 0x68, 0x12]
+data = 'Ea57'
+dic = {}
+for i in range(26):#A-Z
+dic[i] = chr(i+0x41)
+for i in range(26):#a-z
+dic[i+0x64] = chr(i+0x61)
+for i in range(10):#0-9
+dic[i+0xC8] = chr(i+0x30)
+
+cipher[0],cipher[6] = cipher[6],cipher[0]
+cipher[3],cipher[8] = cipher[8],cipher[3]
+cipher[5],cipher[2] = cipher[2],cipher[5]
+cipher[11],cipher[4] = cipher[4],cipher[11]
+                                              
+flag = []
+for i in cipher:
+flag.append(dic[i])
+for i in data:
+flag.append(chr(ord(i) ^ 0x02))
+                                            
+print "flag is: HCTF{" + "".join(flag) + "}"
 ```
 
 `flag is: HCTF{UareS0cLeVerGc75}`
